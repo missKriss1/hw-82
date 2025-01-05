@@ -5,9 +5,13 @@ const TrackSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    album_id :{
+    album :{
         type:  mongoose.Schema.Types.ObjectId,
         ref: "Album",
+        required: [true, 'Album is required'],
+    },
+    continuance:{
+        type: String,
         required: true,
     }
 
