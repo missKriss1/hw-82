@@ -1,7 +1,6 @@
 import express from "express";
 import {Error} from "mongoose";
 import User from "../models/User";
-import bcrypt from "bcrypt";
 
 const userRouter = express.Router();
 
