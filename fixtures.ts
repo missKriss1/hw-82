@@ -28,7 +28,7 @@ const run = async () => {
         {
             name: 'Jane',
             information: 'hello Jane',
-            image:"fixtures/artist_2.jpg"
+            image:"fixtures/artist.2.jpg"
         })
     const [albumJohn1, albumJohn2, albumJane1,  albumJane2] = await Album.create(
         {
