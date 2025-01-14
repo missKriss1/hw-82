@@ -13,10 +13,11 @@ albumsRouter.post("/", imagesUpload.single("image"), async (req, res, next) => {
         }
     }
     try {
+        const parseDate = Number(req.body.date);
         const albumsData = {
             title: req.body.title,
             artist: req.body.artist,
-            date: req.body.date,
+            date: parseDate,
             image: req.file ? req.file.filename : null,
         };
 

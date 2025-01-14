@@ -5,11 +5,13 @@ import mongoose from "mongoose";
 const tracksRouter = express.Router();
 
 tracksRouter.post('/', async (req, res, next) => {
+    const numberTrack = Number(req.body.number)
 
     const tracksData = {
         title: req.body.title,
         album: req.body.album,
-        continuance:req.body.continuance
+        continuance:req.body.continuance,
+        number: numberTrack,
     }
 
     try {
