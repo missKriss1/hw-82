@@ -10,8 +10,8 @@ tracksRouter.post('/', async (req, res, next) => {
     const tracksData = {
         title: req.body.title,
         album: req.body.album,
-        continuance:req.body.continuance,
         number: numberTrack,
+        continuance:req.body.continuance,
     }
 
     try {
