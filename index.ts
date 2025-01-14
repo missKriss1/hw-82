@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import mongoose from "mongoose";
 import artistsRouter from "./routers/artists";
 import albumsRouter from "./routers/albums";
@@ -9,7 +10,9 @@ import config from "./config";
 
 const app = express();
 const port = 8000;
+
 app.use(express.json());
+app.use(cors())
 app.use(express.static("public"));
 
 app.use('/artists', artistsRouter)
