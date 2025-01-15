@@ -2,6 +2,7 @@ import express from "express";
 import Album from "../models/Album";
 import {imagesUpload} from "../multer";
 import Artist from "../models/Artist";
+import Track from "../models/Track";
 
 const albumsRouter = express.Router();
 
@@ -49,15 +50,18 @@ albumsRouter.get("/", async (req, res, next) => {
 })
 
 albumsRouter.get("/:id", async (req, res, next) => {
-    try{
-        const albumById = await Album.findById(req.params.id);
+    try {
+        const albumById = await Album.findById(req.params.id).populate('artist', 'name');
 
-        if(albumById === null){
-            res.status(404).send({error: 'Album not found'});
+        if (!albumById) {
+            res.status(404).send({ error: 'Album not found' });
+            return;
         }
-        res.send(albumById);
-    }catch(e){
-        next(e)
+
+        const trackCount = await Track.countDocuments({ album: albumById._id });
+        res.send({ album: albumById, trackCount });
+    } catch (e) {
+        next(e);
     }
-})
+});
 export default albumsRouter;

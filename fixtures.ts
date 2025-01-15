@@ -59,122 +59,123 @@ const run = async () => {
         {
             title: 'Music by john1',
             album: albumJohn1._id,
-            continuance: 'track 1',
+            continuance: ' 1:23',
             number: 1
         },
         {
             title: 'Music by john1',
             album: albumJohn1._id,
-            continuance: 'track 2',
+            continuance: ' 2:22',
             number: 2
         },
         {
             title: 'Music by john1',
             album: albumJohn1._id,
-            continuance: 'track 3',
+            continuance: ' 3:11',
             number: 3
         },
         {
             title: 'Music by john1',
             album: albumJohn1._id,
-            continuance: 'track 4',
+            continuance: ' 5:74',
             number: 4
         },
         {
             title: 'Music by john1',
             album: albumJohn1._id,
-            continuance: 'track 5',
+            continuance: '1:25',
             number: 5
         },
         {
             title: 'Music by john2',
             album: albumJohn2._id,
-            continuance: 'track 6',
-            number: 6
+            continuance: '6:86',
+            number: 1
         },
         {
             title: 'Music by john2',
             album: albumJohn2._id,
-            continuance: 'track 7',
-            number: 7
+            continuance: ' 1:27',
+            number: 2
         },
         {
             title: 'Music by john2',
             album: albumJohn2._id,
-            continuance: 'track 8',
-            number: 8
+            continuance: ' 2:28',
+            number: 3
         },
         {
             title: 'Music by john2',
             album: albumJohn2._id,
-            continuance: 'track 9',
-            number: 9
+            continuance: ' 1:09',
+            number: 4
+
         },
         {
             title: 'Music by john2',
             album: albumJohn2._id,
-            continuance: 'track 10',
-            number: 10
+            continuance: ' 1:10',
+            number: 5
         },
         {
             title: 'Music by jane1',
             album: albumJane1._id,
-            continuance: 'track 11',
-            number: 11
+            continuance: ' 3:11',
+            number: 1
         },
         {
             title: 'Music by jane1',
             album: albumJane1._id,
-            continuance: 'track 12',
-            number: 12
+            continuance: ' 4:12',
+            number: 2
         },
         {
             title: 'Music by jane1',
             album: albumJane1._id,
-            continuance: 'track 13',
-            number: 13
+            continuance: '5:13',
+            number: 3
         },
         {
             title: 'Music by jane1',
             album: albumJane1._id,
-            continuance: 'track 14',
-            number: 14
+            continuance: ' 3:14',
+            number: 4
         },
         {
             title: 'Music by jane1',
             album: albumJane1._id,
-            continuance: 'track 15',
-            number: 15
+            continuance: '2:15',
+            number: 5
         },
         {
             title: 'Music by jane2',
             album: albumJane2._id,
-            continuance: 'track 16',
-            number: 16
+            continuance: '2:16',
+            number: 1
         },
         {
             title: 'Music by jane2',
             album: albumJane2._id,
-            continuance: 'track 17',
-            number: 17
+            continuance: '1:17',
+            number: 2
         },
         {
             title: 'Music by jane2',
             album: albumJane2._id,
-            continuance: 'track 18',
-            number: 18
+            continuance: '2:18',
+            number: 3
         },
         {
             title: 'Music by jane2',
             album: albumJane2._id,
-            continuance: 'track 19',
-            number: 19
+            continuance: '11:19',
+            number: 4
         },
         {
             title: 'Music by jane2',
             album: albumJane2._id,
-            continuance: 'track 20',
-            number: 20
+            continuance: '15:20',
+            number: 5
         },
         )
     await db.close()

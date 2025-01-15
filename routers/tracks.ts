@@ -37,7 +37,9 @@ tracksRouter.get('/', async (req, res, next) => {
             res.status(400).send({ error: 'Album ID is required' });
             return;
         }
-        const tracks = await Track.find({ album: albumById }).populate('album');
+        const tracks = await Track.find({ album: albumById })
+            .populate('album')
+            .sort({number: 1})
         res.send(tracks);
     }catch (e){
         next(e);
