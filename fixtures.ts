@@ -154,25 +154,25 @@ const run = async () => {
         },
         {
             title: 'Music by jane2',
-            album: albumJane1._id,
+            album: albumJane2._id,
             continuance: 'track 17',
             number: 17
         },
         {
             title: 'Music by jane2',
-            album: albumJane1._id,
+            album: albumJane2._id,
             continuance: 'track 18',
             number: 18
         },
         {
             title: 'Music by jane2',
-            album: albumJane1._id,
+            album: albumJane2._id,
             continuance: 'track 19',
             number: 19
         },
         {
             title: 'Music by jane2',
-            album: albumJane1._id,
+            album: albumJane2._id,
             continuance: 'track 20',
             number: 20
         },

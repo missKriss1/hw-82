@@ -33,13 +33,12 @@ tracksRouter.post('/', async (req, res, next) => {
 tracksRouter.get('/', async (req, res, next) => {
     try {
         const albumById = req.query.album;
-        let track
-        if (albumById) {
-            track = await Track.find({album: albumById}).populate('album');
-        }else{
-            track = await Track.find().populate('album', 'title')
+        if (!albumById) {
+            res.status(400).send({ error: 'Album ID is required' });
+            return;
         }
-        res.send(track);
+        const tracks = await Track.find({ album: albumById }).populate('album');
+        res.send(tracks);
     }catch (e){
         next(e);
     }

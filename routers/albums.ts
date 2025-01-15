@@ -36,7 +36,9 @@ albumsRouter.get("/", async (req, res, next) => {
         const artistById = req.query.artist;
         let album
         if (artistById) {
-            album = await Album.find({artist: artistById}).populate('artist');
+            album = await Album.find({artist: artistById})
+                .populate('artist')
+
         }else{
             album = await Album.find().populate('artist', 'name')
         }
