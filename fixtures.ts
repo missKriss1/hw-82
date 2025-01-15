@@ -40,19 +40,19 @@ const run = async () => {
         {
             title: 'test',
             artist: John._id,
-            date: 2020,
+            date: 2019,
             image: 'fixtures/artist_1_album2.jpg'
         },
         {
             title: 'test',
             artist: Jane._id,
-            date: 2020,
+            date: 2005,
             image: 'fixtures/artist_2_album1.jpg'
         },
         {
             title: 'test',
             artist: Jane._id,
-            date: 2020,
+            date: 2009,
             image: 'fixtures/artist_2_album2.jpg'
         })
      await Track.create(
