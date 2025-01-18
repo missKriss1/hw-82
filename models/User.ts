@@ -1,28 +1,35 @@
 import mongoose, {Model} from "mongoose";
 import bcrypt from "bcrypt";
-import {Users} from "../types";
 import {randomUUID} from "node:crypto";
+import {UsersFiled} from "../types";
 
 interface UserMethod{
     checkPassword(password: string): Promise<boolean>;
     generateToken(): void
 }
 
-type UserModal = Model<Users, {}, UserMethod>
+type UserModal = Model<UsersFiled, {}, UserMethod>
 
 const Schema = mongoose.Schema;
 
 const SALT_WORK_FACTOR = 10;
 
 const userSchema = new Schema<
-    Users,
+    UsersFiled,
     UserModal,
     UserMethod
 >({
     username: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        validate: {
+            validator : async function (value: string): Promise<boolean> {
+                const user:UsersFiled | null = await User.findOne({username: value});
+                return !user;
+            },
+            message: 'This username is already taken'
+        }
     },
     password: {
         type: String,

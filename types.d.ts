@@ -1,4 +1,4 @@
-export interface Users{
+export interface UsersFiled{
     username: string;
     password: string;
     token: string;

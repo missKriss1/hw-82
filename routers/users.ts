@@ -4,7 +4,7 @@ import User from "../models/User";
 
 const userRouter = express.Router();
 
-userRouter.post("/", async (req, res, next) => {
+userRouter.post("/register", async (req, res, next) => {
     try{
         const user = new User({
             username: req.body.username,
@@ -14,7 +14,7 @@ userRouter.post("/", async (req, res, next) => {
         user.generateToken()
 
         await user.save();
-        res.send(user);
+        res.send({user, message: "Registered successfully"});
     }catch(error){
         if(error instanceof Error.ValidationError){
             res.status(400).send(error);
